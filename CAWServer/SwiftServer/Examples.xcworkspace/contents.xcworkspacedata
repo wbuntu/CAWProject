@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CryptoSwift/CryptoSwift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Connectors/MySQL/MySQL.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:URL Routing/URL Routing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../PerfectLib/PerfectLib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../PerfectServer/PerfectServer.xcodeproj">
+   </FileRef>
+</Workspace>

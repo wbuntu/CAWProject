@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1D5757C56D462CA1A606570 /* libPods-parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2758E0BFED085BCE2A15462D /* libPods-parser.a */; };
+		DB06942B1CA4C51F0012A695 /* chapterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB06942A1CA4C51F0012A695 /* chapterModel.m */; };
+		DB06942E1CA4C52B0012A695 /* indexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB06942D1CA4C52B0012A695 /* indexModel.m */; };
+		DB273DB51CA664B1006E99E4 /* BookIndexParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DB273DB41CA664B1006E99E4 /* BookIndexParser.m */; };
+		DB40D40B1C98075A00D6E829 /* JSONDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DB40D40A1C98075A00D6E829 /* JSONDownloader.m */; };
+		DB40D40E1C98089200D6E829 /* MySQLProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = DB40D40D1C98089200D6E829 /* MySQLProcessor.m */; };
+		DB5E2E621C963F1D0076A090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5E2E611C963F1D0076A090 /* main.m */; };
+		DBC789D61C96A20800D7EEC3 /* ReaderFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC789D51C96A20800D7EEC3 /* ReaderFrameParser.m */; };
+		DBC789DC1C96A23000D7EEC3 /* BookInfoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC789DB1C96A23000D7EEC3 /* BookInfoParser.m */; };
+		DBC789E01C96B7ED00D7EEC3 /* bookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC789DF1C96B7ED00D7EEC3 /* bookModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB5E2E5C1C963F1D0076A090 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2758E0BFED085BCE2A15462D /* libPods-parser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-parser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1999E5432D1B66C78BB2612 /* Pods-parser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-parser/Pods-parser.debug.xcconfig"; sourceTree = "<group>"; };
+		CBE1CE4B96B65B298D35E540 /* Pods-parser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parser.release.xcconfig"; path = "Pods/Target Support Files/Pods-parser/Pods-parser.release.xcconfig"; sourceTree = "<group>"; };
+		DB0694291CA4C51F0012A695 /* chapterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chapterModel.h; sourceTree = "<group>"; };
+		DB06942A1CA4C51F0012A695 /* chapterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chapterModel.m; sourceTree = "<group>"; };
+		DB06942C1CA4C52B0012A695 /* indexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = indexModel.h; sourceTree = "<group>"; };
+		DB06942D1CA4C52B0012A695 /* indexModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = indexModel.m; sourceTree = "<group>"; };
+		DB273DB31CA664B1006E99E4 /* BookIndexParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookIndexParser.h; sourceTree = "<group>"; };
+		DB273DB41CA664B1006E99E4 /* BookIndexParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookIndexParser.m; sourceTree = "<group>"; };
+		DB40D4091C98075A00D6E829 /* JSONDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONDownloader.h; sourceTree = "<group>"; };
+		DB40D40A1C98075A00D6E829 /* JSONDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONDownloader.m; sourceTree = "<group>"; };
+		DB40D40C1C98089200D6E829 /* MySQLProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySQLProcessor.h; sourceTree = "<group>"; };
+		DB40D40D1C98089200D6E829 /* MySQLProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySQLProcessor.m; sourceTree = "<group>"; };
+		DB5E2E5E1C963F1D0076A090 /* parser */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = parser; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5E2E611C963F1D0076A090 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBC789D41C96A20800D7EEC3 /* ReaderFrameParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderFrameParser.h; sourceTree = "<group>"; };
+		DBC789D51C96A20800D7EEC3 /* ReaderFrameParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderFrameParser.m; sourceTree = "<group>"; };
+		DBC789DA1C96A23000D7EEC3 /* BookInfoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInfoParser.h; sourceTree = "<group>"; };
+		DBC789DB1C96A23000D7EEC3 /* BookInfoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfoParser.m; sourceTree = "<group>"; };
+		DBC789DD1C96A25F00D7EEC3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DBC789DE1C96B7ED00D7EEC3 /* bookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bookModel.h; sourceTree = "<group>"; };
+		DBC789DF1C96B7ED00D7EEC3 /* bookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bookModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB5E2E5B1C963F1D0076A090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1D5757C56D462CA1A606570 /* libPods-parser.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D999EC8611E57F56229F782 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1999E5432D1B66C78BB2612 /* Pods-parser.debug.xcconfig */,
+				CBE1CE4B96B65B298D35E540 /* Pods-parser.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1A4A900B55F800B2F582CBE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2758E0BFED085BCE2A15462D /* libPods-parser.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB5E2E551C963F1D0076A090 = {
+			isa = PBXGroup;
+			children = (
+				DBC789DD1C96A25F00D7EEC3 /* PrefixHeader.pch */,
+				DB5E2E601C963F1D0076A090 /* parser */,
+				DB5E2E5F1C963F1D0076A090 /* Products */,
+				0D999EC8611E57F56229F782 /* Pods */,
+				1A4A900B55F800B2F582CBE9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DB5E2E5F1C963F1D0076A090 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB5E2E5E1C963F1D0076A090 /* parser */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB5E2E601C963F1D0076A090 /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				DB5E2E611C963F1D0076A090 /* main.m */,
+				DB40D4091C98075A00D6E829 /* JSONDownloader.h */,
+				DB40D40A1C98075A00D6E829 /* JSONDownloader.m */,
+				DB40D40C1C98089200D6E829 /* MySQLProcessor.h */,
+				DB40D40D1C98089200D6E829 /* MySQLProcessor.m */,
+				DBC789DA1C96A23000D7EEC3 /* BookInfoParser.h */,
+				DBC789DB1C96A23000D7EEC3 /* BookInfoParser.m */,
+				DBC789DE1C96B7ED00D7EEC3 /* bookModel.h */,
+				DBC789DF1C96B7ED00D7EEC3 /* bookModel.m */,
+				DB273DB31CA664B1006E99E4 /* BookIndexParser.h */,
+				DB273DB41CA664B1006E99E4 /* BookIndexParser.m */,
+				DB06942C1CA4C52B0012A695 /* indexModel.h */,
+				DB06942D1CA4C52B0012A695 /* indexModel.m */,
+				DBC789D41C96A20800D7EEC3 /* ReaderFrameParser.h */,
+				DBC789D51C96A20800D7EEC3 /* ReaderFrameParser.m */,
+				DB0694291CA4C51F0012A695 /* chapterModel.h */,
+				DB06942A1CA4C51F0012A695 /* chapterModel.m */,
+			);
+			path = parser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB5E2E5D1C963F1D0076A090 /* parser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB5E2E651C963F1D0076A090 /* Build configuration list for PBXNativeTarget "parser" */;
+			buildPhases = (
+				75ECA7FC22E75B9CBD901696 /* Check Pods Manifest.lock */,
+				DB5E2E5A1C963F1D0076A090 /* Sources */,
+				DB5E2E5B1C963F1D0076A090 /* Frameworks */,
+				DB5E2E5C1C963F1D0076A090 /* CopyFiles */,
+				34E86AAE6089A44E17F9173A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = parser;
+			productName = parser;
+			productReference = DB5E2E5E1C963F1D0076A090 /* parser */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB5E2E561C963F1D0076A090 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = wbuntu;
+				TargetAttributes = {
+					DB5E2E5D1C963F1D0076A090 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = DB5E2E591C963F1D0076A090 /* Build configuration list for PBXProject "parser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB5E2E551C963F1D0076A090;
+			productRefGroup = DB5E2E5F1C963F1D0076A090 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB5E2E5D1C963F1D0076A090 /* parser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34E86AAE6089A44E17F9173A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-parser/Pods-parser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75ECA7FC22E75B9CBD901696 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB5E2E5A1C963F1D0076A090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB06942E1CA4C52B0012A695 /* indexModel.m in Sources */,
+				DB5E2E621C963F1D0076A090 /* main.m in Sources */,
+				DB06942B1CA4C51F0012A695 /* chapterModel.m in Sources */,
+				DBC789D61C96A20800D7EEC3 /* ReaderFrameParser.m in Sources */,
+				DBC789E01C96B7ED00D7EEC3 /* bookModel.m in Sources */,
+				DB40D40B1C98075A00D6E829 /* JSONDownloader.m in Sources */,
+				DB40D40E1C98089200D6E829 /* MySQLProcessor.m in Sources */,
+				DBC789DC1C96A23000D7EEC3 /* BookInfoParser.m in Sources */,
+				DB273DB51CA664B1006E99E4 /* BookIndexParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DB5E2E631C963F1D0076A090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DB5E2E641C963F1D0076A090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DB5E2E661C963F1D0076A090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1999E5432D1B66C78BB2612 /* Pods-parser.debug.xcconfig */;
+			buildSettings = {
+				GCC_PREFIX_HEADER = "${SRCROOT}/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
+					"\"${PODS_ROOT}/Headers/Public/Ono\"",
+					"/usr/local/Cellar/mysql/5.7.11/include/**",
+				);
+				LIBRARY_SEARCH_PATHS = "/usr/local/Cellar/mysql/5.7.11/lib/**";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"JSONModel\"",
+					"-l\"Ono\"",
+					"-l\"xml2\"",
+					"-framework",
+					"\"CoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-lz",
+					"-lm",
+					"-lmysqlclient",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DB5E2E671C963F1D0076A090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE1CE4B96B65B298D35E540 /* Pods-parser.release.xcconfig */;
+			buildSettings = {
+				GCC_PREFIX_HEADER = "${SRCROOT}/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
+					"\"${PODS_ROOT}/Headers/Public/Ono\"",
+					"/usr/local/Cellar/mysql/5.7.11/include/**",
+				);
+				LIBRARY_SEARCH_PATHS = "/usr/local/Cellar/mysql/5.7.11/lib/**";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"JSONModel\"",
+					"-l\"Ono\"",
+					"-l\"xml2\"",
+					"-framework",
+					"\"CoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-lz",
+					"-lm",
+					"-lmysqlclient",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB5E2E591C963F1D0076A090 /* Build configuration list for PBXProject "parser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5E2E631C963F1D0076A090 /* Debug */,
+				DB5E2E641C963F1D0076A090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB5E2E651C963F1D0076A090 /* Build configuration list for PBXNativeTarget "parser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5E2E661C963F1D0076A090 /* Debug */,
+				DB5E2E671C963F1D0076A090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB5E2E561C963F1D0076A090 /* Project object */;
+}

@@ -1,0 +1,28 @@
+PODS:
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
+  - JSONModel (1.2.0)
+  - Ono (1.2.2)
+
+DEPENDENCIES:
+  - AFNetworking
+  - JSONModel
+  - Ono
+
+SPEC CHECKSUMS:
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
+  Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+
+COCOAPODS: 0.39.0
