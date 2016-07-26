@@ -9,7 +9,7 @@
 import UIKit
 
 class ReaderCollectionCell: UICollectionViewCell {
-    
+    static let clearImage = UIImage()
     var image:UIImage=UIImage(){
         didSet{
             contentLayer.contents = image.CGImage
@@ -34,6 +34,10 @@ class ReaderCollectionCell: UICollectionViewCell {
         self.contentView.layer.addSublayer(bgLayer)
         self.contentView.layer.addSublayer(contentLayer)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(renderBG), name: kChangeBGLayerNotificaton, object: nil)
+    }
+    
+    func clearContent(){
+        contentLayer.contents = ReaderCollectionCell.clearImage.CGImage
     }
     
     func renderBG() ->Void{

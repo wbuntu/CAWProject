@@ -63,6 +63,8 @@ class ReaderControlletr: UIViewController {
         return label
     }()
     var tap:UITapGestureRecognizer!
+    var lock:OSSpinLock = OS_SPINLOCK_INIT
+    let renderingQueue:dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
@@ -204,16 +206,21 @@ extension ReaderControlletr:UICollectionViewDelegate,UICollectionViewDataSource{
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ReaderCollectionCell.cellIdentifier, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(ReaderCollectionCell.cellIdentifier, forIndexPath: indexPath) as! ReaderCollectionCell
+        cell.image = fetchCellImage(indexPath.row)
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
-        let tempCell:ReaderCollectionCell = cell as! ReaderCollectionCell
-        tempCell.image = fetchCellImage(indexPath.row)
-    }
-    
     func fetchCellImage(row:Int) ->UIImage{
+        
+        dispatch_async(renderingQueue) {
+            self.prefetchCellImage(row+1)
+        }
+        
+        dispatch_async(renderingQueue) {
+            self.prefetchCellImage(row+2)
+        }
+        
         if let im = dataDictionary[row]{
             return im
         }else{
@@ -222,6 +229,27 @@ extension ReaderControlletr:UICollectionViewDelegate,UICollectionViewDataSource{
             dataDictionary[row] = im
             return im
         }
+    }
+    
+    func prefetchCellImage(row:Int){
+        OSSpinLockLock(&lock)
+        if row >= rangeArray.count {
+            OSSpinLockUnlock(&lock)
+            return
+        }
+        if let _ = dataDictionary[row]{
+            OSSpinLockUnlock(&lock)
+            return
+        }
+        let range = rangeArray[row]
+        let im:UIImage = imageWithAttributedString(attStr.attributedSubstringFromRange(range))
+        dataDictionary[row] = im
+        OSSpinLockUnlock(&lock)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didEndDisplayingCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath){
+        let tempCell:ReaderCollectionCell = cell as! ReaderCollectionCell
+        tempCell.clearContent()
     }
     
     func didTap(tap:UITapGestureRecognizer) -> Void {
@@ -269,8 +297,8 @@ extension ReaderControlletr:UICollectionViewDelegate,UICollectionViewDataSource{
         self.isHidden = !self.isHidden
         if self.isHidden{
             UIView.animateWithDuration(NSTimeInterval(UINavigationControllerHideShowBarDuration), animations: {
-                    self.setNeedsStatusBarAppearanceUpdate()
-                    self.fontView.frame = CGRectMake(0, screenHeight, screenWidth, 0)
+                self.setNeedsStatusBarAppearanceUpdate()
+                self.fontView.frame = CGRectMake(0, screenHeight, screenWidth, 0)
                 }, completion: { (finished) in
                     self.fontView.hidden = true
             })
@@ -278,10 +306,10 @@ extension ReaderControlletr:UICollectionViewDelegate,UICollectionViewDataSource{
         }else{
             fontView.hidden = false
             
-                UIView.animateWithDuration(NSTimeInterval(UINavigationControllerHideShowBarDuration), animations: {
+            UIView.animateWithDuration(NSTimeInterval(UINavigationControllerHideShowBarDuration), animations: {
                 self.setNeedsStatusBarAppearanceUpdate()
                 self.fontView.frame = CGRectMake(0, 64, screenWidth, screenHeight-64)
-                })
+            })
         }
         self.navigationController?.setNavigationBarHidden(self.isHidden, animated: true)
     }
@@ -337,7 +365,7 @@ extension ReaderControlletr:ReaderFontControllerDelegate{
         attStr = NSMutableAttributedString()
         dataDictionary = Dictionary<Int,UIImage>()
         collectionView.reloadData()
-//        hud.show()
+        //        hud.show()
         dispatch_async(dispatch_get_global_queue(0, 0)) {
             self.generateAttStr()
             self.paging()
@@ -349,7 +377,7 @@ extension ReaderControlletr:ReaderFontControllerDelegate{
                 index += 1
             }
             dispatch_async(dispatch_get_main_queue(), {
-//                self.hud.dismiss()
+                //                self.hud.dismiss()
                 self.collectionView.reloadData()
                 self.collectionView.setContentOffset(CGPointMake(CGFloat(index)*self.pageWidth, 0), animated: false)
             })
@@ -722,7 +750,3 @@ extension ReaderControlletr{
         return im
     }
 }
-
-
-
-

@@ -7,7 +7,7 @@ import base64
 from PKCS7Encoder import PKCS7Encoder
 
 app = Flask(__name__)
-db = MySQLdb.connect(host="localhost", user="test", passwd="1234567", db="test")
+db = MySQLdb.connect(host="localhost", user="test", passwd="1234567", db="test", charset="utf8")
 cursor = db.cursor()
 
 
