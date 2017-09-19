@@ -9,4 +9,4 @@ Yet another light novel project
 
 这是一个简单的项目，但包含了完整的服务端和客户端，作为一个试验品，用来提升Swift和Python技能。
 
-详细内容可以访问[wbuntu的博客](http://wbuntu.com/wordpress/?p=393)
+详细内容可以访问[wbuntu的博客](http://wbuntu.com/p/393)
